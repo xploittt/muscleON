@@ -1,14 +1,14 @@
 <?php
-require_once "../Modelos/Usuario.php";
+require_once __DIR__ . "/../Modelos/Usuario.php";
 
 class UsuarioControlador {
     public function mostrarFormularioRegistro(){
-        require_once "../Vistas/registro.php";
+        require_once __DIR__ . "/../Vistas/registro.php";
     
     }
 
     public function mostrarLogin(){
-        require_once "../Vistas/login.php";
+        require_once __DIR__ . "/../Vistas/login.php";
     }
     
 

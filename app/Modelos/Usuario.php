@@ -1,6 +1,6 @@
 <?php
 
-require_once "../../configuracion/bbdd.php";
+require_once __DIR__ . "/../../configuracion/bbdd.php";
 
 class Usuario{
     private $conexion;

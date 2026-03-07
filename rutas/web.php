@@ -1,12 +1,12 @@
 <?php 
-require_once "../app/Controladores/UsuarioControlador.php";
-require_once "../app/SoftwareIntermedio/AuthMiddleware.php";
+require_once __DIR__ . "/../app/Controladores/UsuarioControlador.php";
+require_once __DIR__ . "/../app/SoftwareIntermedio/AuthMiddleware.php";
 
 $ruta = $_GET["ruta"] ?? "inicio";
 $controlador = new UsuarioControlador();
 switch($ruta){
     case "inicio":
-        require_once "../app/Vistas/inicio.php";
+        require_once __DIR__ . "/../app/Vistas/inicio.php";
         break;
     case "registro":
         $controlador->mostrarFormularioRegistro();
@@ -22,7 +22,7 @@ switch($ruta){
         break;
     case "dashboard":
         AuthMiddleware::verificar();
-        require_once "../app/Vistas/dashboard.php";
+        require_once __DIR__ . "/../app/Vistas/dashboard.php";
         break;
     case "logout":
         $controlador->logout();

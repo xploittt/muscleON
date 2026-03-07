@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro-MuscleON</title>
-    <link rel="stylesheet" href="../../publica/css/estilos.css">
+    <link rel="stylesheet" href="../publica/css/estilos.css">
 </head>
 <body>
     <div class="auth-form">
@@ -25,7 +25,7 @@
 
             <div class="form-group">
                 <label for="email">Email:</label><br> 
-                <input type="email" name="email" placeholder="email" required>
+                <input type="email" name="email" placeholder="Email" required>
             </div>
 
             <div class="form-group">
@@ -42,10 +42,8 @@
                 <button type="submit" class="btn btn-primary">Registrarse</button>
             </div>
         </form>
-        <div class="auth-links">
-            <p>No tienes cuenta aun? <a href="indice.php?ruta=registro">Registrate aqui!</a></p>
-        </div>
+      
     </div>
-    <script src="../../publica/js/main.js"></script>
+    <script src="../publica/js/main.js"></script>
 </body>
 </html>

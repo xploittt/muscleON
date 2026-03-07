@@ -2,5 +2,5 @@
 
 session_start();
 
-require_once "../configuracion/bbdd.php";
-require_once "../rutas/web.php";
+require_once __DIR__ . "/../configuracion/bbdd.php";
+require_once __DIR__ . "/../rutas/web.php";

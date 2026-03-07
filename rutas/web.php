@@ -22,7 +22,7 @@ switch($ruta){
         break;
     case "dashboard":
         AuthMiddleware::verificar();
-        require_once "../app/Vistas/dashboard.php"
+        require_once "../app/Vistas/dashboard.php";
         break;
     case "logout":
         $controlador->logout();

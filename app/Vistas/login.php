@@ -7,18 +7,29 @@
     <link rel="stylesheet" href="../../publica/css/estilos.css">
 </head>
 <body>
-    <h2>Iniciar Sesion</h2>
+    <div class="auth-form">
+        <h2>Iniciar Sesion</h2>
 
-    <form action="indice.php?ruta=autenticar" method="POST">
+        <form action="indice.php?ruta=autenticar" method="POST">
+            <div class="form-group">
+                <label for="email">Email:</label><br> 
+                <input type="email" name="email" placeholder="email" required>
+            </div>
 
-        <label for="email">Email:</label><br>
-        <input type="email" name="email" placeholder="email" required>
+            <div class="form-group">
+            
+                <label for="contrasena">Contraseña:</label><br>
+                <input type="password" name="contrasena" placeholder="Contraseña" required>
+            </div>
 
-        <label for="contrasena">Contraseña:</label><br>
-        <input type="password" name="contrasena" placeholder="Contraseña" required>
-
-        <button type="submit">Iniciar Sesion</button>
-
-    </form>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+            </div>
+        </form>
+        <div class="auth-links">
+            <p>No tienes cuenta aun? <a href="indice.php?ruta=registro">Registrate aqui!</a></p>
+        </div>
+    </div>
+    <script src="../../publica/js/main.js"></script>
 </body>
 </html>

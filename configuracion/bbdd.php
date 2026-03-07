@@ -16,7 +16,7 @@ class BaseDeDatos {
                 $usuario,
                 $password
             );
-            $this->conexion->setAtribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+            $this->conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         }catch(PDOException $e){
             die("Error de conexion: ".$e->getMessage());
         }

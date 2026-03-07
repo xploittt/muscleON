@@ -7,23 +7,45 @@
     <link rel="stylesheet" href="../../publica/css/estilos.css">
 </head>
 <body>
-    <h2>Registro de Usuarios</h2>
+    <div class="auth-form">
+        <h2>Registro de Usuarios</h2>
 
-    <form action="indice.php?ruta=guardar_usuario" method="POST">
-        <label for="nombre">Nombre:</label><br>
-        <input type="text" name="nombre" placeholder="Nombre" required>
+        <form action="indice.php?ruta=guardar_usuario" method="POST">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                </div>
 
-        <label for="apellidos">Apellidos:</label><br>
-        <input type="text" name="apellidos" placeholder="Apellidos" required>
+                <div class="form-group">
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" name="apellidos" placeholder="Tus apellidos" required>
+                </div>
+            </div>
 
-        <label for="email">Email:</label><br>
-        <input type="email" name="email" placeholder="email" required>
+            <div class="form-group">
+                <label for="email">Email:</label><br> 
+                <input type="email" name="email" placeholder="email" required>
+            </div>
 
-        <label for="contrasena">Contraseña:</label><br>
-        <input type="password" name="contrasena" placeholder="Contraseña" required>
+            <div class="form-group">
+            
+                <label for="contrasena">Contraseña:</label><br>
+                <input type="password" name="contrasena" placeholder="Contraseña" required id="password">
+                <div class="password-strength">
+                    <div class="password-strength-bar" id="password-strength"></div>
+                </div>
+                <div class="password-strength-text" id="password-strength-text"></div>
+            </div>
 
-        <button type="submit">Registrate</button>
-
-    </form>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Registrarse</button>
+            </div>
+        </form>
+        <div class="auth-links">
+            <p>No tienes cuenta aun? <a href="indice.php?ruta=registro">Registrate aqui!</a></p>
+        </div>
+    </div>
+    <script src="../../publica/js/main.js"></script>
 </body>
 </html>

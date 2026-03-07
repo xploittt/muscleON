@@ -8,7 +8,7 @@ class UsuarioControlador {
     }
 
     public function mostrarLogin(){
-        require_once "../Vistas/login.php"
+        require_once "../Vistas/login.php";
     }
     
 
@@ -30,7 +30,7 @@ class UsuarioControlador {
     public function autenticar(){
         if($_SERVER["REQUEST_METHOD"]==="POST") {
             $modelo = new Usuario();
-            $usuario = $modelo->verificarCrendenciales($_POST["email"],$_POST["contrasena"]);
+            $usuario = $modelo->verificarCredenciales($_POST["email"],$_POST["contrasena"]);
             if($usuario){
                 $_SESSION["usuario"] = [
                     "id"=>$usuario["id"],

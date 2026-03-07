@@ -33,13 +33,13 @@ class Usuario{
             ':email' =>$email
         ]);
 
-        return $stmt->fetch(PDO::FETCH_ASSOC)
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
 
     public function verificarCredenciales($email, $password){
         $usuario = $this->buscarPorEmail($email);
-        if($usuario && password_verify($password, $usuario["contrasena"])){
+        if($usuario && password_verify($password, $usuario["contrasena_hasheada"])){
             return $usuario;
         }
         return false;

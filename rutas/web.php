@@ -4,29 +4,24 @@ require_once __DIR__ . "/../app/SoftwareIntermedio/AuthMiddleware.php";
 
 $ruta = $_GET["ruta"] ?? "inicio";
 $controlador = new UsuarioControlador();
-switch($ruta){
-    case "inicio":
+
+$rutas = [
+    "inicio" => function () {
         require_once __DIR__ . "/../app/Vistas/inicio.php";
-        break;
-    case "registro":
+    },
+    "registro" => function () use($controlador) { 
         $controlador->mostrarFormularioRegistro();
-        break;
-    case "guardar_usuario":
+    },
+    "guardar_usuario" => function () use($controlador) {
         $controlador->guardar();
-        break;
-    case "login":
+    },
+    "login" => function () use($controlador) {
         $controlador->mostrarLogin();
-        break;
-    case "autenticar":
+    },
+    "autenticar" => function () use($controlador) {
         $controlador->autenticar();
-        break;
-    case "dashboard":
-        AuthMiddleware::verificar();
-        require_once __DIR__ . "/../app/Vistas/dashboard.php";
-        break;
-    case "logout":
+    },
+    "logout" => function () use($controlador) {
         $controlador->logout();
-        break;
-    default:
-        echo "Esta pagina no se ha encontrado";
-}
+    }
+]

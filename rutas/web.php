@@ -3,25 +3,33 @@ require_once __DIR__ . "/../app/Controladores/UsuarioControlador.php";
 require_once __DIR__ . "/../app/SoftwareIntermedio/AuthMiddleware.php";
 
 $ruta = $_GET["ruta"] ?? "inicio";
-$controlador = new UsuarioControlador();
 
-$rutas = [
-    "inicio" => function () {
+switch($ruta){
+    case "inicio":
         require_once __DIR__ . "/../app/Vistas/inicio.php";
-    },
-    "registro" => function () use($controlador) { 
+        break;
+    case "registro":
+        $controlador = new UsuarioControlador();
         $controlador->mostrarFormularioRegistro();
-    },
-    "guardar_usuario" => function () use($controlador) {
+        break;
+    case "guardar_usuario":
+        $controlador = new UsuarioControlador();
         $controlador->guardar();
-    },
-    "login" => function () use($controlador) {
+        break;
+    case "login":
+        $controlador = new UsuarioControlador();
         $controlador->mostrarLogin();
-    },
-    "autenticar" => function () use($controlador) {
+        break;
+    case "autenticar":
+        $controlador = new UsuarioControlador();
         $controlador->autenticar();
-    },
-    "logout" => function () use($controlador) {
+        break;
+    case "dashboard":
+        AuthMiddleware::verificar();
+        require_once __DIR__ . "/../app/Vistas/dashboard.php";
+        break;
+    case "logout":
+        $controlador = new UsuarioControlador();
         $controlador->logout();
-    }
-]
+        break;
+}

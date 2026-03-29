@@ -124,10 +124,10 @@ document.addEventListener("DOMContentLoaded", function(){
 
     const buttons = document.querySelectorAll('.btn[type="submit"]');
     buttons.forEach(button => {
-        if(!this.classList.contains("loading")){
-            this.classList.add("loading");
-            this.disabled = true;
-            this.innerHTML = '<i class= "fas fa-spinner fa-spin"></i> Procesando...';
+        if(!button.classList.contains("loading")){
+            button.classList.add("loading");
+            button.disabled = true;
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Procesando...';
         }
     });
 });

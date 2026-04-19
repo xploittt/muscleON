@@ -6,7 +6,8 @@ class EjercicioControlador {
         $modelo=new Ejercicio();
         $ejercicios=$modelos->listar();
         $grupos = $modelo->obtenerGruposMusculares();
-        require_once __DIR__ . "/../Vistas/ejercicios.php";
+        // require_once __DIR__ . "/../Vistas/ejercicios.php";
+        require_once __DIR__ . "/../Vistas/ejercicios/lista.php";
    } 
 
    public function mostrarDetalles($id){

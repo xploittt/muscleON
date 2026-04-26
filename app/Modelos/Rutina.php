@@ -53,10 +53,10 @@ class Rutina {
                 WHERE re.rutina_id = :rutina_id";
         $stmt = $this->conexion->prepare($sql);
         $stmt->execute([
-            ":rutina_id"=>$rutinaId["rutina_id"],
+            ":rutina_id"=>$rutinaId,
             
         ]);
-        return $stmt->fetchAll(PDO::FETCH_ASSOC)
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function obtenerPorId($id){
@@ -124,7 +124,7 @@ class Rutina {
                 SET series = :series,
                     repeticiones = :repeticiones,
                     peso = :peso,
-                    tiempo_descansp = :tiempo_descanso
+                    tiempo_descanso = :tiempo_descanso
                 WHERE rutina_id = :rutina_id AND ejercicio_id = :ejercicio_id";
         $stmt = $this->conexion->prepare($sql);
         return $stmt->execute([

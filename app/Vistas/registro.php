@@ -39,7 +39,7 @@
             </div>
 
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">Registrarse</button>
+                <button type="submit" class="btn btn-primario">Registrarse</button>
             </div>
         </form>
       

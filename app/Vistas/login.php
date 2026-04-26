@@ -23,7 +23,7 @@
             </div>
 
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+                <button type="submit" class="btn btn-primario">Iniciar Sesion</button>
             </div>
         </form>
         <div class="auth-links">

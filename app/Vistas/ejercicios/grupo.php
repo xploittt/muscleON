@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . "/../../app/SoftwareIntermedio/AuthMilddleware.php"; ?>
+<?php require_once __DIR__ . "/../../app/SoftwareIntermedio/AuthMiddleware.php"; ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,13 +10,13 @@
 </head>
 <body>
     <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
+        <nav class="barra-navegacion">
+            <div class="contenedor-navegacion">
                 <div class="nav-logo">
                     <i class="fas fa-dumbbell"></i>
                     <span>MuscleON</span>
                 </div>
-                <ul class="nav-links">
+                <ul class="enlaces-navegacion">
                     <li><a href="indice.php?ruta=inicio">Inicio</a></li>
                     <li><a href="indice.php?ruta=ejercicios">Ejercicios</a></li>
                     <li><a href="indice.php?ruta=rutinas">Rutinas</a></li>
@@ -34,7 +34,7 @@
     </header>
 
     <main class="main-content">
-        <div class="container">
+        <div class="contenedor">
             <div class="page-header">
                 <h2><i class="fas fa-crosshairs"></i>Ejercicios de <?php echo htmlspecialchars($_GET["grupo"]);?></h2>
                 <p> Entrena especificamente el grupo muscular de: <?php echo htmlspecialchars($_GET["grupo"]);?> </p>
@@ -112,7 +112,7 @@
                         <i class="fas fa-dumbbell"></i>
                         <h3>No hay ejercicios para este grupo muscular</h3>
                         <p>Pronto añadiremos ejercicios para <?php echo htmlspecialchars($_GET['grupo']); ?></p>
-                        <a href="indice.php?ruta=ejercicios" class="btn btn-primary">Ver otros grupos musculares</a>
+                        <a href="indice.php?ruta=ejercicios" class="btn btn-primario">Ver otros grupos musculares</a>
                     </div>
                 <?php else: ?>
                     <?php foreach($ejercicios as $ejercicio):?>
@@ -133,7 +133,7 @@
                                 <p><?php echo htmlspecialchars(substr($ejercicio['descripcion'], 0, 100)) . '...'; ?></p>
                                 <div class="exercise-actions">
                                     <a href="indice.php?ruta=ejercicio_detalles&id=<?php echo $ejercicio['id']; ?>" 
-                                       class="btn btn-primary btn-sm">
+                                       class="btn btn-primario btn-sm">
                                         <i class="fas fa-eye"></i> Ver
                                     </a>
                                     <?php if (isset($_SESSION['usuario']) && $_SESSION['usuario']['tipo'] === 'admin'): ?>
@@ -187,14 +187,14 @@
 
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
+    <pie-pagina class="pie-pagina">
+        <div class="contenedor">
+            <div class="pie-contenido">
+                <div class="pie-seccion">
                     <h3>MuscleON</h3>
                     <p>Tu compañero perfecto para alcanzar tus metas fitness</p>
                 </div>
-                <div class="footer-section">
+                <div class="pie-seccion">
                     <h4>Enlaces</h4>
                     <ul>
                         <li><a href="indice.php?ruta=inicio">Inicio</a></li>
@@ -203,7 +203,7 @@
                         <li><a href="indice.php?ruta=dietas">Dietas</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
+                <div class="pie-seccion">
                     <h4>Contacto</h4>
                     <p>info@muscleon.com</p>
                     <div class="social-links">
@@ -213,11 +213,11 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="pie-inferior">
                 <p>&copy; 2024 MuscleON. Todos los derechos reservados.</p>
             </div>
         </div>
-    </footer>
+    </pie-pagina>
 
     
     <script>
@@ -244,7 +244,7 @@
         <?php if (isset($_GET['error'])): ?>
             showNotification('<?php echo htmlspecialchars($_GET['error']); ?>', 'error');
         <?php endif; ?>
-        
+
     </script>
 
     <script src="../../publica/js/main.js"></script>

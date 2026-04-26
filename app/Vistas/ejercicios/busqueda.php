@@ -10,13 +10,13 @@
 </head>
 <body>
     <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
+        <nav class="barra-navegacion">
+            <div class="contenedor-navegacion">
                 <div class="nav-logo">
                     <i class="fas fa-dumbbell"></i>
                     <span>MuscleON</span>
                 </div>
-                <ul class="nav-links">
+                <ul class="enlaces-navegacion">
                     <li><a href="indice.php?ruta=inicio">Inicio</a></li>
                     <li><a href="indice.php?ruta=ejercicios" class="active">Ejercicios</a></li>
                     <li><a href="indice.php?ruta=rutinas">Rutinas</a></li>
@@ -34,7 +34,7 @@
     </header>
 
     <main class="main-content">
-       <div class="container">
+       <div class="contenedor">
              <div class="page-header">
                 <h2><i class="fas fa-search"></i> Resultado de la Busqueda</h2>
                 <p> Buscando: <?php echo htmlspecialchars($_GET["termino"]);?> </p>
@@ -53,7 +53,7 @@
                     <form action="indice.php" method="GET" class="busqueda-enlinea-formulario">
                         <input type="hidden" name="ruta" value="ejercicio_buscar">
                         <input type="text" name="termino" class="form-control" value="<?php echo htmlspecialchars($_GET["termino"]);?>" placeholder="Nueva Busqueda...">
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primario">
                             <i class="fas fa-search"></i>
                         </button>
                     </form>
@@ -106,7 +106,7 @@
                                 <p><?php echo htmlspecialchars(substr($ejercicio['descripcion'], 0, 100)) . '...'; ?></p>
                                 <div class="exercise-actions">
                                     <a href="indice.php?ruta=ejercicio_detalles&id=<?php echo $ejercicio['id']; ?>" 
-                                       class="btn btn-primary btn-sm">
+                                       class="btn btn-primario btn-sm">
                                         <i class="fas fa-eye"></i> Ver
                                     </a>
                                     <?php if (isset($_SESSION['usuario']) && $_SESSION['usuario']['tipo'] === 'admin'): ?>
@@ -132,14 +132,14 @@
 
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
+    <pie-pagina class="pie-pagina">
+        <div class="contenedor">
+            <div class="pie-contenido">
+                <div class="pie-seccion">
                     <h3>MuscleON</h3>
                     <p>Tu compañero perfecto para alcanzar tus metas fitness</p>
                 </div>
-                <div class="footer-section">
+                <div class="pie-seccion">
                     <h4>Enlaces</h4>
                     <ul>
                         <li><a href="indice.php?ruta=inicio">Inicio</a></li>
@@ -148,7 +148,7 @@
                         <li><a href="indice.php?ruta=dietas">Dietas</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
+                <div class="pie-seccion">
                     <h4>Contacto</h4>
                     <p>info@muscleon.com</p>
                     <div class="social-links">
@@ -158,11 +158,11 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="pie-inferior">
                 <p>&copy; 2024 MuscleON. Todos los derechos reservados.</p>
             </div>
         </div>
-    </footer>
+    </pie-pagina>
 
     <script>
         document.querySelector('.exercise-form').addEventListener('submit', function(e) {

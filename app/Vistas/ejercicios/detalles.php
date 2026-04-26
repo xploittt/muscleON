@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . "/../../app/SoftwareIntermedio/AuthMilddleware.php"; ?>
+<?php require_once __DIR__ . "/../../app/SoftwareIntermedio/AuthMiddleware.php"; ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,13 +10,13 @@
 </head>
 <body>
     <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
+        <nav class="barra-navegacion">
+            <div class="contenedor-navegacion">
                 <div class="nav-logo">
                     <i class="fas fa-dumbbell"></i>
                     <span>MuscleON</span>
                 </div>
-                <ul class="nav-links">
+                <ul class="enlaces-navegacion">
                     <li><a href="indice.php?ruta=inicio">Inicio</a></li>
                     <li><a href="indice.php?ruta=ejercicios" class="active">Ejercicios</a></li>
                     <li><a href="indice.php?ruta=rutinas">Rutinas</a></li>
@@ -33,7 +33,7 @@
         </nav>
     </header>
     <main class="main-content"> 
-        <div class="container">
+        <div class="contenedor">
             <nav class="breadcrumb">
                 <a href="indice.php?ruta=ejercicios">Ejercicios</a>
                 <span>/</span>
@@ -174,10 +174,10 @@
             </div>
         </div>
     </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
+    <pie-pagina class="pie-pagina">
+        <div class="contenedor">
+            <div class="pie-contenido">
+                <div class="pie-seccion">
                     <div class="logo">
                         <i class="fas fa-dumbbell"></i>
                         <span>muscleON</span>
@@ -198,7 +198,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="footer-section">
+                <div class="pie-seccion">
                     <h4>Enlaces Rapidos</h4>
                     <ul>
                         <li>
@@ -214,12 +214,12 @@
                         </li>
 
                         <li>
-                            <a href="#features">Caracteristicas</a>
+                            <a href="#caracteristicas">Caracteristicas</a>
                         </li>
                     </ul>
                 </div>    
 
-                <div class="footer-section">
+                <div class="pie-seccion">
                     <h4>Soporte</h4>
                     <ul>
                         <li>
@@ -241,7 +241,7 @@
                     </ul>
                 </div>
 
-                <div class="footer-section">
+                <div class="pie-seccion">
                     <h4>Contacto</h4>
                     <p><i class="fas fa-envelope"></i>info@muscleon.com</p>
                     <p><i class="fas fa-phone"></i>661 46 14 45</p>
@@ -252,11 +252,11 @@
 
             </div>
 
-            <div class="footer-bottom">
+            <div class="pie-inferior">
                 <p>&copy; 2026 muscleON. Todos los derechos reservados</p>
             </div>
         </div>
-    </footer>
+    </pie-pagina>
     <script>
         <?php if(isset($_GET["mensaje"])):?>
             showNotification('<?php echo htmlspecialchars($_GET["mensaje"]);?>','success');

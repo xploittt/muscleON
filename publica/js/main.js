@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+    const navLinks = document.querySelector('.enlaces-navegacion');
     
     if (hamburger && navLinks) {
         hamburger.addEventListener('click', function() {
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    const animateElements = document.querySelectorAll('.feature-card, .testimonial-card, .card');
+    const animateElements = document.querySelectorAll('.tarjeta-caracteristica, .testimonial-card, .card');
     animateElements.forEach(el => observer.observe(el));
 
     const buttons = document.querySelectorAll('.btn[type="submit"]');

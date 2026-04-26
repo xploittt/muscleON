@@ -53,7 +53,7 @@ class HistorialEntrenamiento {
 
     public function obtenerPorEstadisticas($usuario_id, $dias=30){
         $sql = "SELECT COUNT(*) AS total_entrenamientos
-                    SUM(CASE WHEN DATE(fecha)=CURDATE()THEN 1 ELSE 0 END) AS hoy,
+                    SUM(CASE WHEN DATE(fecha)=CURDATE() THEN 1 ELSE 0 END) AS hoy,
                     SUM(CASE WHEN DATE(fecha)>=DATE_SUB(CURDATE(), INTERVAL 7 DAY) THEN 1 ELSE 0 END) AS ultima_semana,
                     SUM(CASE WHEN DATE(fecha)>=DATE_SUB(CURDATE(), INTERVAL 30 DAY) THEN 1 ELSE 0 END) AS ultimo_mes
                 FROM historial_entrenamiento
@@ -84,7 +84,7 @@ class HistorialEntrenamiento {
 
     public function eliminar($id,$usuario_id){
         $sql = "DELETE FROM historial_entrenamiento
-                    WHERE id =:id AND usuarioo_id = :usuario_id";
+                    WHERE id =:id AND usuario_id = :usuario_id";
         $stmt = $this->conexion->prepare($sql);
         return $stmt->execute([
             ":id"=>$id,

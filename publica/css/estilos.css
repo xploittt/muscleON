@@ -536,3 +536,63 @@ p {
         grid-template-columns: 1fr;
     }
 }
+
+.formulario-rutina {
+    max-width:600px;
+    margin:0 auto;
+}
+
+.ejercicios-rutina {
+    margin:1.5rem 0;
+    padding:1rem;
+    background: var(--color-claro);
+    border-radius:var(--radio-borde);
+
+    
+
+}
+
+.ejercicios-rutina h4 {
+            color: var(--color-primario);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .lista-ejercicios {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .lista-ejercicios li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .lista-ejercicios li:last-child {
+            border-bottom: none;
+        }
+        
+        .lista-ejercicios i {
+            color: var(--color-exito);
+            margin-right: 0.5rem;
+        }
+        
+        .detalle-ejercicio {
+            font-size: 0.9rem;
+            color: var(--color-texto-claro);
+        }
+        
+        .acciones-rutina {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .tarjeta-caracteristica {
+            min-height: 300px;
+        }
+

@@ -269,7 +269,7 @@
 
         </div>
     </main>
-    <pie-pagina class="pie-pagina">
+    <footer class="pie-pagina">
         <div class="contenedor">
             <div class="pie-contenido">
                 <div class="pie-seccion">
@@ -351,7 +351,7 @@
                 <p>&copy; 2026 muscleON. Todos los derechos reservados</p>
             </div>
         </div>
-    </pie-pagina>
+    </footer>
     <script>
         const weeklyData = {
             labels: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'],

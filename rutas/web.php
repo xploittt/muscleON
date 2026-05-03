@@ -57,7 +57,13 @@ switch($ruta){
         break;
     case "rutinas":
         AuthMiddleware::verificar();
-        require_once __DIR__ . "/../app/Vistas/rutinas.php";
+        $controlador = new RutinaControlador();
+        $controlador->listar();
+        break;
+    case "guardar_rutina":
+        AuthMiddleware::verificar();
+        $controlador = new RutinaControlador();
+        $controlador->guardar();
         break;
     case "ejercicios":
         AuthMiddleware::verificar();

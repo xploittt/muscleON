@@ -233,7 +233,7 @@
         </div>
     </main>
 
-    <pie-pagina class="pie-pagina">
+    <footer class="pie-pagina">
         <div class="contenedor">
             <div class="pie-contenido">
                 <div class="pie-seccion">
@@ -263,7 +263,7 @@
                 <p>&copy; 2024 MuscleON. Todos los derechos reservados.</p>
             </div>
         </div>
-    </pie-pagina>
+    </footer>
 
     <script>
         function filtrarPorPeriodo() {

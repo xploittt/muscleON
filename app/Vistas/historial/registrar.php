@@ -206,13 +206,13 @@
             </div>
         </div>
     </main>
-    <pie-pagina class="pie-pagina">
+    <footer class="pie-pagina">
         <div class="contenedor">
             <div class="pie-inferior">
                 <p>&copy; 2026 muscleON - TFG DAW</p>
             </div>
         </div>
-    </pie-pagina>
+    </footer>
     
     <script>
         let exerciseCounter = <?php echo isset($ejercicios) ? count($ejercicios) : 0; ?>;

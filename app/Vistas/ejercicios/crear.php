@@ -1,4 +1,4 @@
-<?php require_once _DIR_ . "/../../app/SoftwareIntermedio/AuthMilddleware.php"; ?>
+<?php require_once _DIR_ . "/../../app/SoftwareIntermedio/AuthMiddleware.php"; ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -48,7 +48,7 @@
                         </div>
                         <div class="form-group">
                             <label for="grupo_muscular">Grupo Muscular: </label>
-                            <select name="form-control" id="grupo_muscular" name="grupo_muscular" required>
+                            <select name="form-control" id="grupo_muscular" class="grupo_muscular" required>
                                 <option value="">
                                     Selecciona un grupo Muscular
                                 </option>
@@ -88,7 +88,7 @@
                         <a href="indice.php?ruta=ejercicios" class="btn btn-secondary">
                             <i class="fas fa-times"></i>Cancelar
                         </a>
-                        <button type="submit" class="btn btn-primario">
+                        <button type="submit" class="btn btn-primary">
                             <i class="fas fa-save"></i>Crear Ejercicio
                         </button>
                     </div>
@@ -155,7 +155,7 @@
     </pie-pagina>
 
     <script>
-        document.querySelector('.exercise-form').addEventListener('submit', function(e) {
+        document.querySelector('.formulario-ejercicio').addEventListener('submit', function(e) {
             const nombre = document.getElementById('nombre').value.trim();
             const descripcion = document.getElementById('descripcion').value.trim();
             const grupoMuscular = document.getElementById('grupo_muscular').value;

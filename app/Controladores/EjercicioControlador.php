@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . "/../Modelo/Ejercicio.php";
+require_once __DIR__ . "/../Modelos/Ejercicio.php";
 
 class EjercicioControlador {
    public function listar(){
@@ -12,7 +12,7 @@ class EjercicioControlador {
 
    public function mostrarDetalles($id){
         $modelo = new Ejercicio();
-        $ejercicio = $mdoelo->obtenerPorId($id);
+        $ejercicio = $modelo->obtenerPorId($id);
         if(!$ejercicio){
             header('Location:indice.php?ruta=ejercicios');
             exit();
@@ -27,7 +27,7 @@ class EjercicioControlador {
 
    public function mostrarFormularioEditar($id){
         $modelo = new Ejercicio();
-        $ejercicio = $mdoelo->obtenerPorId($id);
+        $ejercicio = $modelo->obtenerPorId($id);
         if(!$ejercicio){
             header('Location:indice.php?ruta=ejercicios');
             exit();

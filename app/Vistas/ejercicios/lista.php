@@ -1,4 +1,4 @@
-<?php require_once _DIR_ . "/../../app/SoftwareIntermedio/AuthMilddleware.php"; ?>
+<?php require_once __DIR__ . "/../../SoftwareIntermedio/AuthMiddleware.php"; ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -46,7 +46,7 @@
                         <input type="hidden" name="ruta" value="ejercicio_buscar">
                         <div class="grupo-busqueda">
                             <input type="text" name="termino" placeholder="Buscar ejercicios..." class="form-control">
-                            <button type="submit" class="btn btn-primario">
+                            <button type="submit" class="btn btn-primary">
                                 <i class="fas fa-search"></i>
                             </button>
                         </div>
@@ -98,7 +98,7 @@
                                 <p><?php echo htmlspecialchars(substr($ejercicio['descripcion'], 0, 100)) . '...'; ?></p>
                                 <div class="acciones-ejercicio">
                                     <a href="indice.php?ruta=ejercicio_detalles&id=<?php echo $ejercicio['id']; ?>" 
-                                       class="btn btn-primario btn-sm">
+                                       class="btn btn-primary btn-sm">
                                         <i class="fas fa-eye"></i> Ver
                                     </a>
                                     <?php if (isset($_SESSION['usuario']) && $_SESSION['usuario']['tipo'] === 'admin'): ?>
@@ -157,7 +157,7 @@
 
     <script>
         function filtrarPorGrupo() {
-            const grupo = document.getElementById('grupo-filter').value;
+            const grupo = document.getElementById('grupo-filtro').value;
             if (grupo) {
                 window.location.href = `indice.php?ruta=ejercicio_grupo&grupo=${encodeURIComponent(grupo)}`;
             } else {

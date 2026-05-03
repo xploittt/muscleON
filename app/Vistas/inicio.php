@@ -23,7 +23,7 @@
                     <a href="indice.php?ruta=inicio" class="active">Inicio</a>
                     <a href="#caracteristicas">Caracteristicas</a>
                     <a href="indice.php?ruta=login" class="btn btn-contorno">Iniciar Sesion</a>
-                    <a href="indice.php?ruta=registro" class="btn btn-primario">Registrarse</a>
+                    <a href="indice.php?ruta=registro" class="btn btn-primary">Registrarse</a>
                 </div>
                 <div class="hamburguer">
                     <span></span>
@@ -35,7 +35,7 @@
             <h1>Transforma tu Cuerpo</h1>
             <p>La aplicacion completa para gesitionar tu rutina de entrenamiento, dietas y seguimiento de progreso</p>
             <div class="botones-hero">
-                <a href="indice.php?ruta=registro" class="btn btn-primario btn-grande">Comenzar Gratis</a>
+                <a href="indice.php?ruta=registro" class="btn btn-primary btn-grande">Comenzar Gratis</a>
                 <a href="#caracteristicas" class="btn btn-contorno btn-grande">Saber mas</a>
             </div>
         </div>

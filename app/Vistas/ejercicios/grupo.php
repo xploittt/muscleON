@@ -62,7 +62,7 @@
                     <div class="detalles-grupo">
                         <h2><?php echo htmlspecialchars($_GET["grupo"]);?></h2>
                         <div class="stats">
-                            <span class="count-badge"><?php echo count($ejercicio);?></span>
+                            <span class="count-badge"><?php echo count($ejercicios);?></span>
                             <span>Ejercicios Disponibles</span>
                         </div>
                     </div>
@@ -112,7 +112,7 @@
                         <i class="fas fa-dumbbell"></i>
                         <h3>No hay ejercicios para este grupo muscular</h3>
                         <p>Pronto añadiremos ejercicios para <?php echo htmlspecialchars($_GET['grupo']); ?></p>
-                        <a href="indice.php?ruta=ejercicios" class="btn btn-primario">Ver otros grupos musculares</a>
+                        <a href="indice.php?ruta=ejercicios" class="btn btn-primary">Ver otros grupos musculares</a>
                     </div>
                 <?php else: ?>
                     <?php foreach($ejercicios as $ejercicio):?>
@@ -133,7 +133,7 @@
                                 <p><?php echo htmlspecialchars(substr($ejercicio['descripcion'], 0, 100)) . '...'; ?></p>
                                 <div class="exercise-actions">
                                     <a href="indice.php?ruta=ejercicio_detalles&id=<?php echo $ejercicio['id']; ?>" 
-                                       class="btn btn-primario btn-sm">
+                                       class="btn btn-primary btn-sm">
                                         <i class="fas fa-eye"></i> Ver
                                     </a>
                                     <?php if (isset($_SESSION['usuario']) && $_SESSION['usuario']['tipo'] === 'admin'): ?>
@@ -175,7 +175,7 @@
                     $gruposRelacionados= $related[$grupoactual]??["Pecho", "Espalda", "Pierna"];
 
                     foreach($gruposRelacionados as $grupo){
-                        echo '<a href="indice.php?ruta=ejercicio_grupo&grupo=' . urlencode($group) . '" class="tag">' . htmlspecialchars($group) . '</a>';
+                        echo '<a href="indice.php?ruta=ejercicio_grupo&grupo=' . urlencode($grupo) . '" class="tag">' . htmlspecialchars($group) . '</a>';
                     }
                     ?>
                 </div>
@@ -226,7 +226,7 @@
             const grid = document.querySelector("cuadricula-ejercicio");
             const cards = Array.from(grid.querySelectorAll("exercise-card"));
 
-            cards.sort((a,b)=>){
+            cards.sort((a,b)=>{
                 const titleA = a.querySelector("h3").textContent.toLowerCase();
                 const titleB = b.querySelector("h3").textContent.toLowerCase();
                 if(sortValue==="nombre"){
@@ -234,7 +234,7 @@
 
                 }
                 return 0;
-            }
+           });
         }
 
         <?php if (isset($_GET['mensaje'])): ?>

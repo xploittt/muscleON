@@ -1,4 +1,4 @@
-<?php require_once _DIR_ . "/../../app/SoftwareIntermedio/AuthMilddleware.php"; ?>
+<?php require_once __DIR__ . "/../../SoftwareIntermedio/AuthMiddleware.php"; ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -53,7 +53,7 @@
                     <form action="indice.php" method="GET" class="busqueda-enlinea-formulario">
                         <input type="hidden" name="ruta" value="ejercicio_buscar">
                         <input type="text" name="termino" class="form-control" value="<?php echo htmlspecialchars($_GET["termino"]);?>" placeholder="Nueva Busqueda...">
-                        <button type="submit" class="btn btn-primario">
+                        <button type="submit" class="btn btn-primary">
                             <i class="fas fa-search"></i>
                         </button>
                     </form>
@@ -106,7 +106,7 @@
                                 <p><?php echo htmlspecialchars(substr($ejercicio['descripcion'], 0, 100)) . '...'; ?></p>
                                 <div class="exercise-actions">
                                     <a href="indice.php?ruta=ejercicio_detalles&id=<?php echo $ejercicio['id']; ?>" 
-                                       class="btn btn-primario btn-sm">
+                                       class="btn btn-primary btn-sm">
                                         <i class="fas fa-eye"></i> Ver
                                     </a>
                                     <?php if (isset($_SESSION['usuario']) && $_SESSION['usuario']['tipo'] === 'admin'): ?>

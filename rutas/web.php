@@ -57,13 +57,13 @@ switch($ruta){
         break;
     case "rutinas":
         AuthMiddleware::verificar();
-        require_once __DIR__ . "/../app/Vistas/rutinas.php"
+        require_once __DIR__ . "/../app/Vistas/rutinas.php";
         break;
     case "ejercicios":
         AuthMiddleware::verificar();
-        require_once __DIR__ . "/../app/Vistas/ejercicios.php"
+        require_once __DIR__ . "/../app/Vistas/ejercicios.php";
         break;
     default:
-        require_once __DIR__ . "/../app/Vistas/inicio.php"
+        require_once __DIR__ . "/../app/Vistas/inicio.php";
         break;
 }

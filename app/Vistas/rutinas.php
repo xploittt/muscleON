@@ -19,7 +19,7 @@
     </form>
 
     <h2>MIS RUTINAS</h2>
-    <?php foreach($rutinas as $r):?>
+    <?php foreach($rutinas as $r):?> 
         <div style="border: 1px solid #ccc; padding:10px; margin:10px 0;">
             <h3><?=htmlspecialchars($r["nombre"])?></h3>
             <p><?=htmlspecialchars($r["descripcion"])?></p>
@@ -34,5 +34,6 @@
                         </li>
             </ul>
         </div>
+        <!-- TODO: Por completar -->
 </body>
 </html>

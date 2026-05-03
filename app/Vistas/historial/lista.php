@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . "/../../app/SoftwareIntermedio/AuthMiddleware.php"; ?>
+<?php require_once __DIR__ . "/../../SoftwareIntermedio/AuthMiddleware.php"; ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -89,7 +89,7 @@
                         </div>
 
                         <div class="botones-acciones">
-                            <a href="indice.php?ruta=historial_registrar" class="btn btn-primario">
+                            <a href="indice.php?ruta=historial_registrar" class="btn btn-primary">
                                 <i class="fas fa-plus"></i>Registrar entrenamiento
                             </a>
                             
@@ -139,7 +139,7 @@
                      <i class="fas fa-clipboard-list"></i>
                         <h3>No hay entrenamientos registrados</h3>
                         <p>Comienza a registrar tus entrenamientos para llevar un seguimiento completo</p>
-                        <a href="indice.php?ruta=historial_registrar" class="btn btn-primario">
+                        <a href="indice.php?ruta=historial_registrar" class="btn btn-primary">
                             <i class="fas fa-plus"></i>Registrar primer entrenamiento
                         </a>
                     </div>
@@ -189,7 +189,7 @@
                                             </span>
                                         </div>
                                         <div class="acciones-entrenamiento">
-                                            <a href="indice.php?ruta=historial_detalles&id=<?php echo $entrenamiento["id"];?>" class="btn btn-primario">
+                                            <a href="indice.php?ruta=historial_detalles&id=<?php echo $entrenamiento["id"];?>" class="btn btn-primary">
                                                 <i class="fas fa-eye"></i>Ver
                                             </a>
 

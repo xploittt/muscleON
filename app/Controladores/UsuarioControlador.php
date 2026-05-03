@@ -38,7 +38,7 @@ class UsuarioControlador {
                     "tipo"=>$usuario["tipo"]
 
                 ];
-                header("Location:indice.php?ruta=dashboard");
+                header("Location:indice.php?ruta=inicio");
                 exit();
             }
             echo "Hay algun dato incorrecto!";

@@ -30,10 +30,9 @@ class HistorialEntrenamiento {
                     ORDER BY he.fecha DESC
                     LIMIT :limite";
         $stmt = $this->conexion->prepare($sql);
-        $stmt->execute([
-            ":usuario_id"=>$usuario_id,
-            ":limite"=>$limite
-        ]);
+        $stmt->bindParam(':usuario_id',$usuario_id, PDO::PARAM_INT);
+        $stmt->bindParam(':limite',$limite, PDO::PARAM_INT);
+        $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     }

@@ -67,7 +67,7 @@
                                 <?php 
                                     $rutina_modelo=new Rutina();
                                     $usuario_id=$_SESSION["usuario"]["id"];
-                                    $rutinas_usuario=$rutina_modelo->obtenerPorUsuario($usuario_id);
+                                    $rutinas_usuario=$rutina_modelo->listarPorUsuario($usuario_id);
                                     foreach($rutinas_usuario as $rut): ?>
                                         <option value="<?php echo $rut["id"];?>">
                                             <?php echo htmlspecialchars($rut["nombre"]);?>
@@ -82,7 +82,7 @@
                 <div class="seccion-form">
                     <h3><i class="fas fa-dumbbell"></i>Ejercicios Realizado</h3>
                     <div id="contenedor-ejercicios">
-                        <?php if($rutina && !empty($ejercicio)):?>
+                        <?php if($rutina && !empty($ejercicios)):?>
                             <?php foreach($ejercicios as $index => $ejercicio):?>
                                 <div class="ingreso-ejercicio" data-exercise-id="<?php echo $ejercicio["ejercicio_id"];?>">
                                     <div class="ejercicio-cabecera">
@@ -220,7 +220,7 @@
         function cargarEjercicios() {
             const rutinaId = document.getElementById('rutina_id').value;
             if (!rutinaId) {
-                document.getElementById('exercises-contenedor').innerHTML = `
+                document.getElementById('contenedor-ejercicios').innerHTML = `
                     <div class="no-exercises-selected">
                         <i class="fas fa-dumbbell"></i>
                         <p>Selecciona una rutina para cargar sus ejercicios</p>
@@ -234,7 +234,7 @@
         }
 
         function agregarEjercicioManual() {
-            const contenedor = document.getElementById('exercises-contenedor');
+            const contenedor = document.getElementById('contenedor-ejercicios');
             const exerciseId = 'manual_' + exerciseCounter++;
             
             const exerciseHTML = `

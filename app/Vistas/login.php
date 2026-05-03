@@ -7,27 +7,32 @@
     <link rel="stylesheet" href="../publica/css/estilos.css">
 </head>
 <body>
-    <div class="auth-form">
-        <h2>Iniciar Sesion</h2>
-
-        <form action="indice.php?ruta=autenticar" method="POST">
-            <div class="form-group">
-                <label for="email">Email:</label><br> 
-                <input type="email" name="email" placeholder="Email" required>
+    <div class="formulario-auth">
+        <div class="contenedor-auth">
+            <div class="logo">
+                MuscleON
             </div>
+            <h2>Iniciar Sesión</h2>
 
-            <div class="form-group">
+            <form action="indice.php?ruta=autenticar" method="POST">
+                <div class="grupo-form-auth">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" placeholder="Email" required class="control-formulario-auth">
+                </div>
+
+                <div class="grupo-form-auth">
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" name="contrasena" placeholder="Contraseña" required class="control-formulario-auth">
+                </div>
+
+                <div class="grupo-form-auth">
+                    <button type="submit" class="boton-auth">Iniciar Sesión</button>
+                </div>
+            </form>
             
-                <label for="contrasena">Contraseña:</label><br>
-                <input type="password" name="contrasena" placeholder="Contraseña" required>
+            <div class="enlaces-auth">
+                <p>¿No tienes cuenta aún? <a href="indice.php?ruta=registro">Regístrate aquí</a></p>
             </div>
-
-            <div class="form-group">
-                <button type="submit" class="btn btn-primario">Iniciar Sesion</button>
-            </div>
-        </form>
-        <div class="auth-links">
-            <p>No tienes cuenta aun? <a href="indice.php?ruta=registro">Registrate aqui!</a></p>
         </div>
     </div>
     <script src="../publica/js/main.js"></script>

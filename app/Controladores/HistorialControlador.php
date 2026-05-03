@@ -2,7 +2,7 @@
 
 require_once __DIR__ . "/../Modelos/HistorialEntrenamiento.php";
 require_once __DIR__ . "/../SoftwareIntermedio/AuthMiddleware.php";
-require_once __DIR__ . "/../../configuracion/bbdd.php"
+require_once __DIR__ . "/../../configuracion/bbdd.php";
 
 class HistorialControlador {
     public function mostrarLista(){

@@ -255,7 +255,7 @@
             <div class="seccion-exportacion">
                 <h2><i class="fas fa-download"></i>Exportar Datos</h2>
                 <div class="opciones-exportacion">
-                    <button class="btn btn-primario" onclick="exportarPDF()">
+                    <button class="btn btn-primary" onclick="exportarPDF()">
                         <i class="fas fa-file-pdf"></i> Exportar como PDF
                     </button>
                     <button class="btn btn-success" onclick="exportarExcel()">
@@ -378,7 +378,7 @@
             }]
         };
 
-        const weeklyChart = new Chart(document.getElementById('weeklyChart'), {
+        const weeklyChart = new Chart(document.getElementById('graficaSemanal'), {
             type: 'bar',
             data: weeklyData,
             options: {
@@ -395,7 +395,7 @@
             }
         });
 
-        const muscleChart = new Chart(document.getElementById('muscleChart'), {
+        const muscleChart = new Chart(document.getElementById('graficaMuscular'), {
             type: 'doughnut',
             data: muscleData,
             options: {

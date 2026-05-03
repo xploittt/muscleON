@@ -26,7 +26,7 @@ class Ejercicio {
             ":grupo_muscular"=>$datos["grupo_muscular"],
             ":imagen_url"=>$datos["imagen_url"] ??null,
             ":video_url"=>$datos["video_url"] ??null
-        ])
+        ]);
 
         
     }

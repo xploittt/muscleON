@@ -106,7 +106,7 @@
                         <a href="indice.php?ruta=ejercicio_detalles&id=<?php echo $ejercicio['id']; ?>" class="btn btn-secondary">
                             <i class="fas fa-times"></i> Cancelar
                         </a>
-                        <button type="submit" class="btn btn-primario">
+                        <button type="submit" class="btn btn-primary">
                             <i class="fas fa-save"></i> Actualizar Ejercicio
                         </button>
                     </div>

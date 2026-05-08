@@ -10,7 +10,7 @@ class RutinaControlador {
         $ejercicios = $ejercicioModelo->listar();
         $ejerciciosPorRutina = [];
         foreach($rutinas as $r){
-            $ejerciciosPorRutina[$r["id"]] = $modelo->ejerciciosDeRutina([$r["id"]]);
+            $ejerciciosPorRutina[$r["id"]] = $modelo->ejerciciosDeRutina($r["id"]);
         }
         require __DIR__ . "/../Vistas/rutinas.php";
     }

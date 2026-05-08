@@ -4,10 +4,9 @@ require_once __DIR__ . "/../Modelos/Ejercicio.php";
 class EjercicioControlador {
    public function listar(){
         $modelo=new Ejercicio();
-        $ejercicios=$modelos->listar();
+        $ejercicios=$modelo->listar();
         $grupos = $modelo->obtenerGruposMusculares();
-        // require_once __DIR__ . "/../Vistas/ejercicios.php";
-        require_once __DIR__ . "/../Vistas/ejercicios/lista.php";
+        require_once __DIR__ . "/../Vistas/ejercicios.php";
    } 
 
    public function mostrarDetalles($id){

@@ -22,7 +22,6 @@
                     <li><a href="indice.php?ruta=ejercicios" class="active">Ejercicios</a></li>
                     <li><a href="indice.php?ruta=rutinas">Rutinas</a></li>
                     <li><a href="indice.php?ruta=dietas">Dietas</a></li>
-                    <li><a href="indice.php?ruta=dashboard">Dashboard</a></li>
                     <li><a href="indice.php?ruta=logout">Logout</a></li>
                 </ul>
                 <div class="hamburguer">

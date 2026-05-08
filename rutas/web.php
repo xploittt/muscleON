@@ -27,10 +27,7 @@ switch($ruta){
         $controlador = new UsuarioControlador();
         $controlador->autenticar();
         break;
-    case "dashboard":
-        AuthMiddleware::verificar();
-        require_once __DIR__ . "/../app/Vistas/dashboard.php";
-        break;
+    
     case "logout":
         $controlador = new UsuarioControlador();
         $controlador->logout();
@@ -67,7 +64,13 @@ switch($ruta){
         break;
     case "ejercicios":
         AuthMiddleware::verificar();
-        require_once __DIR__ . "/../app/Vistas/ejercicios.php";
+        $controlador = new EjercicioControlador();
+        $controlador->listar();
+        break;
+    case "guardar_ejercicio":
+        AuthMiddleware::verificar();
+        $controlador = new EjercicioControlador();
+        $controlador->crear();
         break;
     default:
         require_once __DIR__ . "/../app/Vistas/inicio.php";

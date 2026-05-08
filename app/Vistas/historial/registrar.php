@@ -1,11 +1,11 @@
-<?php require_once __DIR__ . "/../../app/SoftwareIntermedio/AuthMiddleware.php"; ?>
+<?php require_once __DIR__ . "/../../SoftwareIntermedio/AuthMiddleware.php"; ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar Entrenamiento - MuscleON</title>
-    <link rel="stylesheet" href="../../publica/css/estilos_español.css">
+    <link rel="stylesheet" href="../../publica/css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
 </head>
@@ -22,7 +22,6 @@
                     <a href="indice.php?ruta=ejercicios">Ejercicios</a>
                     <a href="indice.php?ruta=rutinas">Rutinas</a>
                     <a href="indice.php?ruta=dietas">Dietas</a>
-                    <a href="indice.php?ruta=dashboard">Dashboard</a>
                     <a href="indice.php?ruta=logout">Logout</a>
                 </div>
                 <div class="hamburguer">
@@ -329,6 +328,6 @@
             showNotification('<?php echo htmlspecialchars($error); ?>', 'error');
         <?php endif; ?>
     </script>
-    <script src="../../publica/js/main.js"></script>
+   
 </body>
 </html>

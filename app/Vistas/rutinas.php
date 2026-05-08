@@ -20,7 +20,6 @@
                     <li><a href="indice.php?ruta=ejercicios">Ejercicios</a></li>
                     <li><a href="indice.php?ruta=rutinas" class="active" >Rutinas</a></li>
                     <li><a href="indice.php?ruta=dietas">Dietas</a></li>
-                    <li><a href="indice.php?ruta=dashboard">Dashboard</a></li>
                     <li><a href="indice.php?ruta=logout">Logout</a></li>
                 </ul>
                 

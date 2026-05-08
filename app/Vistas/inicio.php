@@ -20,15 +20,20 @@
                     <span>muscleON</span>
                 </div>
                 <div class="enlaces-navegacion">
-                    <a href="indice.php?ruta=inicio" class="active">Inicio</a>
-                    <a href="#caracteristicas">Caracteristicas</a>
-                    <a href="indice.php?ruta=login" class="btn btn-contorno">Iniciar Sesion</a>
-                    <a href="indice.php?ruta=registro" class="btn btn-primary">Registrarse</a>
+                    <?php if(isset($_SESSION["usuario"])):?>
+                        <a href="indice.php?ruta=inicio" class="active">Inicio</a>
+                        <a href="indice.php?ruta=ejercicios">Ejercicios</a>
+                        <a href="indice.php?ruta=rutinas">Rutinas</a>
+                        <a href="indice.php?ruta=historial">Historial</a>
+                        <a href="indice.php?ruta=registro" class="btn btn-primary">Registrarse</a>
+                    <?php else:?>
+                        <a href="indice.php?ruta=inicio" class="active">Inicio</a>
+                        <a href="#caracteristicas">Caracteristicas</a>
+                        <a href="indice.php?ruta=login" class="btn btn-contorno">Iniciar Sesion</a>
+                        <a href="indice.php?ruta=registro" class="btn btn-primary">Registrarse</a>
+                    <?php endif;?>
                 </div>
-                <div class="hamburguer">
-                    <span></span>
-                    <span></span>
-                </div>
+                
             </div>
         </nav>
         <div class="contenido-hero">

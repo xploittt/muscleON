@@ -19,6 +19,7 @@
                     <li><a href="indice.php?ruta=inicio">Inicio</a></li>
                     <li><a href="indice.php?ruta=ejercicios" class="active">Ejercicios</a></li>
                     <li><a href="indice.php?ruta=rutinas">Rutinas</a></li>
+                    <li><a href="indice.php?ruta=dietas">Dietas</a></li>
                     <li><a href="indice.php?ruta=historial">Historial</a></li>
                     <li><a href="indice.php?ruta=logout">Logout</a></li>
                 </ul>
@@ -26,7 +27,7 @@
         </nav>
     </header>
 
-    <main class="main-content">
+    <main class="contenido-principal">
         <div class="contenedor">
             <div class="cabecera-pagina">
                 <h1><i class="fas fa-dumbbell"></i> Catálogo de Ejercicios</h1>

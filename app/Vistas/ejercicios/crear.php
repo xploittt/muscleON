@@ -1,11 +1,11 @@
-<?php require_once _DIR_ . "/../../app/SoftwareIntermedio/AuthMiddleware.php"; ?>
+<?php require_once __DIR__ . "/../../app/SoftwareIntermedio/AuthMiddleware.php"; ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear Ejercicio - MuscleON</title>
-    <link rel="stylesheet" href="../../publica/css/estilos.css">
+    <link rel="stylesheet" href="/muscleON/publica/css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -32,20 +32,20 @@
         </nav>
     </header>
 
-    <main class="main-content">
+    <main class="contenido-principal">
        <div class="contenedor">
-            <div class="page-header">
+            <div class="cabecera-pagina">
                 <h1><i class="fas fa-plus-circle"></i>Crear nuevo ejercicio</h1>
                 <p>Añade un nuevo ejercicio a nuestra base de datos</p>
             </div>
             <div class="form-contenedor">
                 <form action="indice.php?ruta=ejercicio-guardar" method="POST" class="formulario-ejercicio">
                     <div class="form-row">
-                        <div class="form-group">
+                        <div class="grupo-formulario">
                             <label for="nombre">Nombre del Ejercicio: </label>
                             <input type="text" name="nombre" id="nombre" class="form-control" required placeholder="ej:Press Inclinado">
                         </div>
-                        <div class="form-group">
+                        <div class="grupo-formulario">
                             <label for="grupo_muscular">Grupo Muscular: </label>
                             <select name="form-control" id="grupo_muscular" class="grupo_muscular" required>
                                 <option value="">
@@ -65,18 +65,18 @@
                             </select>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="grupo-formulario">
                         <label for="descripcion">Descripcion: </label>
                         <textarea name="descripcion" id="descripcion" class="form-control" rows="6" required placeholder="Describe detalladamente como se hace el ejercicio"></textarea>
                     </div>
                     <div class="form-row">
-                        <div class="form-group">
+                        <div class="grupo-formulario">
                             <label for="imagen_url">URL de la Imagen</label>
                             <input type="url" id="imagen_url" name="imagen_url" class="form-control" placeholder="https://unejemplo.com/imagen1.jpg">
                                 <small class="form-help">URL de una imagen que muestra el ejercicio</small>
                         </div>
 
-                        <div class="form-group">
+                        <div class="grupo-formulario">
                             <label for="video_url">URL del video</label>
                             <input type="url" id="video_url" name="video_url" class="form-control" placeholder="https://youtube.com/embed/...">
                                 <small class="form-help">URL de un video tutorial que muestra el ejercicio</small>

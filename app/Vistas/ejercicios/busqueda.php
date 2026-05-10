@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados Busqueda - MuscleON</title>
-    <link rel="stylesheet" href="../../publica/css/estilos.css">
+    <link rel="stylesheet" href="/muscleON/publica/css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -32,9 +32,9 @@
         </nav>
     </header>
 
-    <main class="main-content">
+    <main class="contenido-principal">
        <div class="contenedor">
-             <div class="page-header">
+             <div class="cabecera-pagina">
                 <h2><i class="fas fa-search"></i> Resultado de la Busqueda</h2>
                 <p> Buscando: <?php echo htmlspecialchars($_GET["termino"]);?> </p>
             </div>

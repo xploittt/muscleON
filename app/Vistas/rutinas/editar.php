@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Ejercicio - MuscleON</title>
-    <link rel="stylesheet" href="/muscleON/publica/css/estilos.css">
+    <title>Editar Rutina - MuscleON</title>
+    <link rel="stylesheet" href="../../../publica/css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -21,6 +21,7 @@
                     <li><a href="indice.php?ruta=ejercicios">Ejercicios</a></li>
                     <li><a href="indice.php?ruta=rutinas">Rutinas</a></li>
                     <li><a href="indice.php?ruta=dietas">Dietas</a></li>
+                    <li><a href="indice.php?ruta=historial">Historial</a></li>
                     <li><a href="indice.php?ruta=logout">Logout</a></li>
                 </ul>
                 <div class="hamburguer">
@@ -158,67 +159,8 @@
         </div>
     </footer>
 
-    <script>
-        document.querySelector('.exercise-form').addEventListener('submit', function(e) {
-            const nombre = document.getElementById('nombre').value.trim();
-            const descripcion = document.getElementById('descripcion').value.trim();
-            const grupoMuscular = document.getElementById('grupo_muscular').value;
+    
 
-            if (!nombre || !descripcion || !grupoMuscular) {
-                e.preventDefault();
-                showNotification('Por favor, completa todos los campos obligatorios', 'error');
-                return;
-            }
-
-            if (nombre.length < 3) {
-                e.preventDefault();
-                showNotification('El nombre debe tener al menos 3 caracteres', 'error');
-                return;
-            }
-
-            if (descripcion.length < 20) {
-                e.preventDefault();
-                showNotification('La descripción debe tener al menos 20 caracteres', 'error');
-                return;
-            }
-        });
-
-        document.getElementById('imagen_url').addEventListener('blur', function() {
-            const url = this.value.trim();
-            const previewcontenedor = document.querySelector('.image-preview');
-            
-            if (url && isValidUrl(url)) {
-                if (!previewcontenedor) {
-                    const contenedor = document.createElement('div');
-                    contenedor.className = 'image-preview';
-                    contenedor.innerHTML = '<h4>Vista previa de la imagen:</h4>';
-                    const img = document.createElement('img');
-                    img.src = url;
-                    img.alt = 'Vista previa';
-                    img.style.cssText = 'max-width: 200px; height: auto; border-radius: 8px;';
-                    contenedor.appendChild(img);
-                    this.parentElement.parentElement.insertBefore(contenedor, this.parentElement.parentElement.lastElementChild);
-                } else {
-                    const img = previewcontenedor.querySelector('img');
-                    img.src = url;
-                }
-            }
-        });
-
-        function isValidUrl(string) {
-            try {
-                new URL(string);
-                return true;
-            } catch (_) {
-                return false;
-            }
-        }
-
-        <?php if (isset($error)): ?>
-            showNotification('<?php echo htmlspecialchars($error); ?>', 'error');
-        <?php endif; ?>
-    </script>
-
-    <script src="../../publica/js/main.js"></script>
+    
 </body>
 </html>

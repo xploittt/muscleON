@@ -62,6 +62,16 @@ switch($ruta){
         $controlador = new RutinaControlador();
         $controlador->guardar();
         break;
+    case "editar_rutina":
+        AuthMiddleware::verificar();
+        $controlador = new RutinaControlador();
+        $controlador->mostrarFormularioEditar($_GET["id"] ?? 0);
+        break;
+     case "actualizar_rutina":
+        AuthMiddleware::verificar();
+        $controlador = new RutinaControlador();
+        $controlador->actualizar($_GET["id"] ?? 0);
+        break;
     case "ejercicios":
         AuthMiddleware::verificar();
         $controlador = new EjercicioControlador();
@@ -71,6 +81,58 @@ switch($ruta){
         AuthMiddleware::verificar();
         $controlador = new EjercicioControlador();
         $controlador->crear();
+        break;
+    case "actualizar_ejercicio":
+        AuthMiddleware::verificar();
+        $controlador = new EjercicioControlador();
+        $controlador->actualizar();
+        break;
+    case "editar_ejercicio":
+        AuthMiddleware::verificar();
+        $controlador = new EjercicioControlador();
+        $controlador->mostrarFormularioEditar($_GET["id"] ?? 0);
+        break;
+    case "dietas":
+        AuthMiddleware::verificar();
+        require_once __DIR__ . "/../app/Controladores/DietaControlador.php";
+        $controlador= new DietaControlador();
+        $controlador->listar();
+        break;
+    case "crear_dieta":
+        AuthMiddleware::verificar();
+        require_once __DIR__ . "/../app/Controladores/DietaControlador.php";
+        $controlador= new DietaControlador();
+        $controlador->mostrarFormularioCrear();
+        break;
+    case "guardar_dieta":
+        AuthMiddleware::verificar();
+        require_once __DIR__ . "/../app/Controladores/DietaControlador.php";
+        $controlador= new DietaControlador();
+        $controlador->crear();
+        break;
+    case "dieta_detalles":
+        AuthMiddleware::verificar();
+        require_once __DIR__ . "/../app/Controladores/DietaControlador.php";
+        $controlador= new DietaControlador();
+        $controlador->mostrarDetalles($_GET["id"] ?? 0);
+        break;
+    case "editar_dieta":
+        AuthMiddleware::verificar();
+        require_once __DIR__ . "/../app/Controladores/DietaControlador.php";
+        $controlador= new DietaControlador();
+        $controlador->mostrarFormularioEditar($_GET["id"] ?? 0);
+        break;
+    case "actualizar_dieta":
+        AuthMiddleware::verificar();
+        require_once __DIR__ . "/../app/Controladores/DietaControlador.php";
+        $controlador= new DietaControlador();
+        $controlador->actualizar($_GET["id"] ?? 0,$_POST);
+        break;
+    case "eliminar_dieta":
+        AuthMiddleware::verificar();
+        require_once __DIR__ . "/../app/Controladores/DietaControlador.php";
+        $controlador= new DietaControlador();
+        $controlador->eliminar($_GET["id"] ?? 0);
         break;
     default:
         require_once __DIR__ . "/../app/Vistas/inicio.php";

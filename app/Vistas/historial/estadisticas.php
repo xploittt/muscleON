@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estadisticas de Entrenamiento - MuscleON</title>
-    <link rel="stylesheet" href="../../publica/css/estilos.css">
+    <link rel="stylesheet" href="/muscleON/publica/css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -32,7 +32,7 @@
             </div>
         </nav>
     </header>
-    <main class="main-content"> 
+    <main class="contenido-principal"> 
         <div class="contenedor">
             <div class="cabecera-pagina">
                 <h1><i class="fas fa-chart-line"></i>Estadisticas de Entrenamiento</h1>

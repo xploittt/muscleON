@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicios - MuscleON</title>
-    <link rel="stylesheet" href="../../publica/css/estilos.css">
+    <link rel="stylesheet" href="/muscleON/publica/css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -34,9 +34,9 @@
         </nav>
     </header>
 
-    <main class="main-content">
+    <main class="contenido-principal">
         <div class="contenedor">
-            <div class="page-header">
+            <div class="cabecera-pagina">
                 <h1><i class="fas fa-dumbbell"></i> Catálogo de Ejercicios</h1>
                 <p>Explora nuestra completa base de datos de ejercicios</p>
             </div>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar Entrenamiento - MuscleON</title>
-    <link rel="stylesheet" href="../../publica/css/estilos.css">
+    <link rel="stylesheet" href="/muscleON/publica/css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
 </head>
@@ -304,23 +304,29 @@
         }
 
         // Validación del formulario
-        document.querySelector('.training-form').addEventListener('submit', function(e) {
-            const exercises = document.querySelectorAll('.exercise-entry');
-            if (exercises.length === 0) {
-                e.preventDefault();
-                showNotification('Debes agregar al menos un ejercicio', 'error');
-                return;
-            }
-
-            exercises.forEach(exercise => {
-                const inputs = exercise.querySelectorAll('input[required]');
-                inputs.forEach(input => {
-                    if (!input.value.trim()) {
+        document.addEventListener('DOMContentLoaded', function(){
+            const form = document.querySelector(".formulario-entrenamiento");
+            if(form){
+                form.addEventListener("submit",function(e)){
+                    const exercises = document.querySelectorAll('.exercise-entry');
+                    if (exercises.length === 0) {
                         e.preventDefault();
-                        input.classList.add('error');
+                        showNotification('Debes agregar al menos un ejercicio', 'error');
+                        return;
                     }
-                });
-            });
+
+                    exercises.forEach(exercise => {
+                        const inputs = exercise.querySelectorAll('input[required]');
+                        inputs.forEach(input => {
+                            if (!input.value.trim()) {
+                                e.preventDefault();
+                                input.classList.add('error');
+                            }
+                        });
+                    });
+                }
+            }
+            
         });
 
         // Mostrar error si existe

@@ -31,7 +31,7 @@
             </div>
         </nav>
     </header>
-    <main class="main-content"> 
+    <main class="contenido-principal"> 
         <div class="contenedor">
             <nav class="breadcrumb">
                 <a href="indice.php?ruta=historial">Historial</a>

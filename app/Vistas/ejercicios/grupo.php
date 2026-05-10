@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> <?php echo htmlspecialchars($_GET["grupo"]);?> - MuscleON</title>
-    <link rel="stylesheet" href="../../publica/css/estilos.css">
+    <link rel="stylesheet" href="/muscleON/publica/css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -32,9 +32,9 @@
         </nav>
     </header>
 
-    <main class="main-content">
+    <main class="contenido-principal">
         <div class="contenedor">
-            <div class="page-header">
+            <div class="cabecera-pagina">
                 <h2><i class="fas fa-crosshairs"></i>Ejercicios de <?php echo htmlspecialchars($_GET["grupo"]);?></h2>
                 <p> Entrena especificamente el grupo muscular de: <?php echo htmlspecialchars($_GET["grupo"]);?> </p>
             </div>

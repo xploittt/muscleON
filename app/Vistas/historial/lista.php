@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historial de Entrenamiento - MuscleON</title>
-    <link rel="stylesheet" href="../../publica/css/estilos.css">
+    <link rel="stylesheet" href="/muscleON/publica/css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -32,9 +32,9 @@
         </nav>
     </header>
 
-    <main class="main-content">
+    <main class="contenido-principal">
         <div class="contenedor">
-            <div class="page-header">
+            <div class="cabecera-pagina">
                 <h1><i class="fas fa-history"></i> Historial de Entrenamiento</h1>
                 <p>Registro completo de tus entrenamientos</p>
             </div>
@@ -293,6 +293,6 @@
         <?php endif; ?>
     </script>
 
-    <script src="../../publica/js/main.js"></script>
+
 </body>
 </html>

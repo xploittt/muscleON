@@ -20,13 +20,14 @@
                     <li><a href="indice.php?ruta=ejercicios">Ejercicios</a></li>
                     <li><a href="indice.php?ruta=rutinas" class="active" >Rutinas</a></li>
                     <li><a href="indice.php?ruta=dietas">Dietas</a></li>
+                    <li><a href="indice.php?ruta=historial">Historial</a></li>
                     <li><a href="indice.php?ruta=logout">Logout</a></li>
                 </ul>
                 
             </div>
         </nav>
     </header>
-    <main class="main-content">
+    <main class="contenido-principal">
         <div class="contenedor">
             <div class="cabecera-pagina">
                 <h1><i class="fas fa-clipboard-list"></i>MIS RUTINAS</h1>

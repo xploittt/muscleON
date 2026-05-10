@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($ejercicio["nombre"]);?> - MuscleON</title>
-    <link rel="stylesheet" href="../../publica/css/estilos.css">
+    <link rel="stylesheet" href="/muscleON/publica/css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -16,13 +16,14 @@
                     <i class="fas fa-dumbbell"></i>
                     <span>MuscleON</span>
                 </div>
-                <ul class="enlaces-navegacion">
-                    <li><a href="indice.php?ruta=inicio">Inicio</a></li>
-                    <li><a href="indice.php?ruta=ejercicios" class="active">Ejercicios</a></li>
-                    <li><a href="indice.php?ruta=rutinas">Rutinas</a></li>
-                    <li><a href="indice.php?ruta=dietas">Dietas</a></li>
-                    <li><a href="indice.php?ruta=logout">Logout</a></li>
-                </ul>
+                <div class="enlaces-navegacion">
+                    <a href="indice.php?ruta=inicio">Inicio</a>
+                    <a href="indice.php?ruta=ejercicios">Ejercicios</a>
+                    <a href="indice.php?ruta=rutinas">Rutinas</a>
+                    <a href="indice.php?ruta=dietas">Dietas</a>
+                    <a href="indice.php?ruta=historial">Historial</a>
+                    <a href="indice.php?ruta=logout">Logout</a>
+                </div>
                 <div class="hamburguer">
                     <span></span>
                     <span></span>
@@ -31,7 +32,7 @@
             </div>
         </nav>
     </header>
-    <main class="main-content"> 
+    <main class="contenido-principal"> 
         <div class="contenedor">
             <nav class="breadcrumb">
                 <a href="indice.php?ruta=ejercicios">Ejercicios</a>

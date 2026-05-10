@@ -107,9 +107,9 @@ document.addEventListener('DOMContentLoaded', function() {
             background: linear-gradient(135deg, #3498DB, #2980B9);
         }
         
-        .form-group input.error,
-        .form-group textarea.error,
-        .form-group select.error {
+        .grupo-formulario input.error,
+        .grupo-formulario textarea.error,
+        .grupo-formulario select.error {
             border-color: #E74C3C !important;
         }
     `;

@@ -16,15 +16,15 @@
                     <i class="fas fa-dumbbell"></i>
                     <span>MuscleON</span>
                 </div>
-                <ul class="enlaces-navegacion">
+                <div class="enlaces-navegacion">
                     
-                        <li><a href="indice.php?ruta=inicio">Inicio</a></li>
-                        <li><a href="indice.php?ruta=ejercicios" class="active">Ejercicios</a></li>
-                        <li><a href="indice.php?ruta=rutinas">Rutinas</a></li>
-                        <li><a href="indice.php?ruta=dietas">Dietas</a></li>
-                        <li><a href="indice.php?ruta=logout">Cerrar Sesion</a></li>
+                        <a href="indice.php?ruta=inicio">Inicio</a>
+                        <a href="indice.php?ruta=ejercicios" class="active">Ejercicios</a>
+                        <a href="indice.php?ruta=rutinas">Rutinas</a>
+                        <a href="indice.php?ruta=dietas">Dietas</a>
+                        <a href="indice.php?ruta=logout">Cerrar Sesion</a>
                     
-                </ul>
+                </div>
                
             </div>
         </nav>

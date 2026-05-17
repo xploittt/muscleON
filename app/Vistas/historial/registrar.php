@@ -24,11 +24,7 @@
                     <a href="indice.php?ruta=dietas">Dietas</a>
                     <a href="indice.php?ruta=logout">Logout</a>
                 </div>
-                <div class="hamburguer">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+              
             </div>
         </nav>
     </header>

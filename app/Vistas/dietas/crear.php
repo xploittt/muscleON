@@ -18,13 +18,13 @@
                     <i class="fas fa-dumbbell"></i>
                     <span>MuscleON</span>
                 </div>
-                <ul class="enlaces-navegacion">
+                <div class="enlaces-navegacion">
                     <a href="indice.php?ruta=inicio">Inicio</a>
                     <a href="indice.php?ruta=ejercicios" >Ejercicios</a>
                     <a href="indice.php?ruta=rutinas">Rutinas</a>
                     <a href="indice.php?ruta=dietas">Dietas</a>
                     <a href="indice.php?ruta=logout">Logout</a>
-                </ul>
+                </div>
                
             </div>
         </nav>

@@ -24,11 +24,7 @@
                     <a href="indice.php?ruta=historial">Historial</a>
                     <a href="indice.php?ruta=logout">Logout</a>
                 </div>
-                <div class="hamburguer">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+               
             </div>
         </nav>
     </header>
@@ -68,10 +64,10 @@
                                 <i class="fas fa-arrow-left"></i>Volver
                             </a>
                             <?php if(isset($_SESSION["usuario"])&& $_SESSION["usuario"]["tipo"]==="admin"):?>
-                                <a href="indice.php?ruta=ejercicio_editar&id=<?php echo $ejercicio["id"];?>" class="btn btn-warning">
+                                <a href="indice.php?ruta=editar_ejercicio&id=<?php echo $ejercicio["id"];?>" class="btn btn-warning">
                                     <i class="fas fa-edit"></i> Editar
                                 </a>
-                                <form action="indice.php?ruta=ejercicio_eliminar" method="POST" class="inline-form"
+                                <form action="indice.php?ruta=eliminar_ejercicio" method="POST" class="inline-form"
                                     onsubmit="return confirm('Estas seguro de eliminar este ejercicio?')">
                                 
                                     <input type="hidden" name="id" value="<?php echo $ejercicio["id"];?>">

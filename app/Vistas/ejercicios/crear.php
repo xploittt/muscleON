@@ -23,11 +23,7 @@
                     <li><a href="indice.php?ruta=dietas">Dietas</a></li>
                     <li><a href="indice.php?ruta=logout">Logout</a></li>
                 </ul>
-                <div class="hamburguer">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                
             </div>
         </nav>
     </header>
@@ -39,7 +35,7 @@
                 <p>Añade un nuevo ejercicio a nuestra base de datos</p>
             </div>
             <div class="form-contenedor">
-                <form action="indice.php?ruta=ejercicio-guardar" method="POST" class="formulario-ejercicio">
+                <form action="indice.php?ruta=guardar_ejercicio" method="POST" class="formulario-ejercicio">
                     <div class="form-row">
                         <div class="grupo-formulario">
                             <label for="nombre">Nombre del Ejercicio: </label>
@@ -47,7 +43,7 @@
                         </div>
                         <div class="grupo-formulario">
                             <label for="grupo_muscular">Grupo Muscular: </label>
-                            <select name="form-control" id="grupo_muscular" class="grupo_muscular" required>
+                            <select name="grupo_muscular" id="grupo_muscular" class="form-control" required>
                                 <option value="">
                                     Selecciona un grupo Muscular
                                 </option>

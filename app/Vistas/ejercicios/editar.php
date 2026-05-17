@@ -23,11 +23,7 @@
                     <li><a href="indice.php?ruta=dietas">Dietas</a></li>
                     <li><a href="indice.php?ruta=logout">Logout</a></li>
                 </ul>
-                <div class="hamburguer">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+         
             </div>
         </nav>
     </header>
@@ -40,7 +36,7 @@
             </div>
 
             <div class="form-contenedor">
-                <form action="indice.php?ruta=ejercicio_actualizar" method="POST" class="exercise-form">
+                <form action="indice.php?ruta=actualizar_ejercicio" method="POST" class="exercise-form">
                     <input type="hidden" name="id" value="<?php echo $ejercicio['id']; ?>">
                     
                     <div class="form-row">
@@ -115,7 +111,7 @@
             <div class="danger-zone">
                 <h3><i class="fas fa-exclamation-triangle"></i> Zona de Peligro</h3>
                 <p>Estas acciones son irreversibles. Ten cuidado al realizar cambios.</p>
-                <form action="indice.php?ruta=ejercicio_eliminar" method="POST" 
+                <form action="indice.php?ruta=eliminar_ejercicios" method="POST" 
                       class="delete-form" onsubmit="return confirm('¿Estás seguro de eliminar este ejercicio? Esta acción no se puede deshacer.')">
                     <input type="hidden" name="id" value="<?php echo $ejercicio['id']; ?>">
                     <button type="submit" class="btn btn-danger">
